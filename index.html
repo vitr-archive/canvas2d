@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+  <!--The screen is only 256 x 192 pixels in size.
+  In text mode, that’s only 32 columns x 24 rows of text.
+  Each character cell is 8 x 8 pixels.-->
+    <canvas id="myCanvas" width="192 " height="192 " style="margin-left: 150px; margin-top: 50px;"></canvas>
+
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var x = 188;
+      var y = 30;
+      var width = 200;
+      var height = 137;
+      var imageObj = new Image();
+
+      imageObj.onload = function() {
+//        context.drawImage(imageObj, x, y, width, height);
+        context.fillStyle="#FF0000";
+//        context.fillRect(0,0,150,75);
+//        context.fillRect(0,0,1,1);
+      };
+//      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+
+      context.fillStyle="#FF0000";
+//      context.fillRect(0,0,150,75);
+      context.fillRect(100,100,10,10);
+      context.rect(0,0,80,60);
+
+      context.beginPath();
+      context.rect(0, 0, 800, 600);
+      context.lineWidth = 7;
+      context.strokeStyle = 'black';
+      context.stroke();
+
+
+    </script>
+  </body>
+</html>
