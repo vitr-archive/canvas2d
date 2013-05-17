@@ -9,10 +9,27 @@
     </style>
   </head>
   <body>
-  <!--The screen is only 256 x 192 pixels in size.
+  <!--
+
+  The screen is only 256 x 192 pixels in size.
   In text mode, that’s only 32 columns x 24 rows of text.
-  Each character cell is 8 x 8 pixels.-->
-    <canvas id="myCanvas" width="192 " height="192 " style="margin-left: 150px; margin-top: 50px;"></canvas>
+  Each character cell is 8 x 8 pixels.
+
+  Video Memory
+  0x5B00 - 0x4000 = 0x1B00
+  23296 - 16384 = 6912
+
+  pixels
+  22528 - 16384 = 6144
+
+  colours
+  23296 - 22528 = 768
+
+
+
+
+  -->
+    <canvas id="myCanvas" width="256 " height="192 " style="margin-left: 150px; margin-top: 50px;"></canvas>
 
     <script>
       var canvas = document.getElementById('myCanvas');
@@ -32,8 +49,12 @@
 //      imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
 
       context.fillStyle="#FF0000";
+      context.fillStyle="rgb(000, 000, 000)";
+      context.fillStyle="rgb(192, 192, 192)";
+      context.fillStyle="rgb(255, 000, 255)";
+//      context.fillStyle="rgb(255, 255, 255)";
 //      context.fillRect(0,0,150,75);
-      context.fillRect(100,100,10,10);
+      context.fillRect(100,100,20,20);
       context.rect(0,0,80,60);
 
       context.beginPath();
